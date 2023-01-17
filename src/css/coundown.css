@@ -1,0 +1,125 @@
+.container {
+    margin-left: 100px;
+    margin-top: 20px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.container button {
+    width: 70px;
+    height: 100%;
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 1.25;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.flatpickr-input {
+    font-family: inherit;
+    font-size: 20px;
+    line-height: 1.25;
+    display: inline;
+    width: 230px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+.flatpickr-calendar {
+    width: 310px;
+}
+
+.time-input {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.timer {
+    padding-top: 10px;
+    height: 150px;
+    display: inline-grid;
+    grid-template-columns: repeat(4, 70px);
+    column-gap: 10px;
+    font-family: inherit;
+
+}
+
+.field {
+    height: 90px;
+    /* width: 70px; */
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+
+    perspective: 500px;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.field .value {
+
+    display: block;
+    width: 100%;
+    font-size: 50px;
+    line-height: 0;
+    background: #212121;
+    color: #f8f8f8;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    transform: translateZ(0);
+    transform-style: flat;
+}
+
+.value.top {
+    height: 50%;
+    top: 0;
+    padding-top: 45px;
+
+    border-radius: 5px 5px 0 0;
+    transform-origin: 50% 100%;
+}
+
+.value.bottom {
+    height: 50%;
+    bottom: 0;
+    padding-bottom: 0px;
+
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-radius: 0 0 5px 5px;
+    transform-origin: 50% 0;
+}
+
+
+.value.curr.top {
+    transform: rotateX(0deg);
+    z-index: 3;
+}
+
+.value.next.bottom {
+    transform: rotateX(90deg);
+    z-index: 2;
+}
+
+.flip .value.curr.top {
+    transition: all 300ms ease-in-out;
+    transform: rotateX(-90deg);
+}
+
+.flip .value.next.bottom {
+    transition: all 300ms ease-in-out 300ms;
+    transform: rotateX(0deg);
+}
+
+.field .label {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 100px;
+}

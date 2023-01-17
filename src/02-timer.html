@@ -4,30 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countdown timer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    />
+
     <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/coundown.css" />
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
 
-    <input type="text" id="datetime-picker" />
-    <button type="button" data-start>Start</button>
+    <div class="container">
+      <div class="time-input">
+        <input type="text" id="datetime-picker" />
+        <button type="button" data-start>Start</button>
+      </div>
+      <div class="timer">
+        <div class="field">
+          <span class="value curr top" data-days>00</span>
+          <span class="value next top">00</span>
+          <span class="value next bottom">00</span>
+          <span class="value curr bottom" data-days>00</span>
+          <span class="label">Days</span>
+        </div>
 
-    <div class="timer">
-      <div class="field">
-        <span class="value" data-days>00</span>
-        <span class="label">Days</span>
-      </div>
-      <div class="field">
-        <span class="value" data-hours>00</span>
-        <span class="label">Hours</span>
-      </div>
-      <div class="field">
-        <span class="value" data-minutes>00</span>
-        <span class="label">Minutes</span>
-      </div>
-      <div class="field">
-        <span class="value" data-seconds>00</span>
-        <span class="label">Seconds</span>
+        <div class="field">
+          <span class="value curr top" data-hours>00</span>
+          <span class="value next top">00</span>
+          <span class="value next bottom">00</span>
+          <span class="value curr bottom" data-hours>00</span>
+          <span class="label">Hours</span>
+        </div>
+
+        <div class="field minutes flip">
+          <span class="value curr top" data-minutes>00</span>
+          <span class="value next top" data-prevMinutes>00</span>
+          <span class="value next bottom" data-prevMinutes>00</span>
+          <span class="value curr bottom" data-minutes>00</span>
+          <span class="label">Minutes</span>
+        </div>
+
+        <div class="field seconds flip">
+          <span class="value curr top" data-seconds>00</span>
+          <span class="value next top" data-prevSeconds>00</span>
+          <span class="value next bottom" data-prevSeconds>00</span>
+          <span class="value curr bottom" data-seconds>00</span>
+          <span class="label">Seconds</span>
+        </div>
       </div>
     </div>
 

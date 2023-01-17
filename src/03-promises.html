@@ -12,17 +12,17 @@
     <form class="form">
       <label>
         First delay (ms)
-        <input type="number" name="delay" required />
+        <input type="number" name="delay" min="0" />
       </label>
       <label>
         Delay step (ms)
-        <input type="number" name="step" required />
+        <input type="number" name="step" min="0" />
       </label>
       <label>
         Amount
-        <input type="number" name="amount" required />
+        <input type="number" name="amount" min="0" />
       </label>
-      <button type="submit">Create promises</button>
+      <button>Create promises</button>
     </form>
 
     <script src="js/03-promises.js" type="module"></script>
